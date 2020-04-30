@@ -25,9 +25,15 @@
 }
 
 .board .row .cell.snake {
-    background: lightblue;
+    --snake-color: lightblue;
+    background: var(--snake-color);
+}
+
+.board .row .cell.snake-tail {
+    border-radius: 50% 0 0 50%;
 }
 
 .board .row .cell.snake-head {
-    background: blue;
+    --snake-color: blue;
+    border-radius: 0 40% 40% 0;
 }
