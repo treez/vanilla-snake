@@ -13,16 +13,21 @@
     display: table-row;
 }
 
-.row:nth-child(odd) .cell:nth-child(odd) {
-    background: green;
-}
-
-.row:nth-child(even) .cell:nth-child(even) {
-    background: green;
-}
-
 .cell {
     width: 50px;
     height: 50px;
     display: table-cell;
+}
+
+.row:nth-child(odd) .cell:nth-child(odd),
+.row:nth-child(even) .cell:nth-child(even) {
+    background: green;
+}
+
+.board .row .cell.snake {
+    background: lightblue;
+}
+
+.board .row .cell.snake-head {
+    background: blue;
 }
