@@ -36,4 +36,25 @@
 .board .row .cell.snake-head {
     --snake-color: blue;
     border-radius: 0 40% 40% 0;
+    position: relative;
+}
+
+.board .row .cell.snake-head::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+    background: lightblue;
+}
+
+.board .row .cell.snake-head::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+    background: lightblue;
 }
