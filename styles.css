@@ -26,3 +26,12 @@
     height: 50px;
     display: table-cell;
 }
+
+.apple {
+    --apple-color: red;
+    border: 1px solid var(--apple-color);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset -9px -8px 5px 16px var(--apple-color),
+    3px 4px 12px 0 black;
+}
