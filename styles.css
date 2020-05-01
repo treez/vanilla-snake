@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -36,36 +36,40 @@
 .board .row .cell.snake-head {
     border-radius: 0 40% 40% 0;
     position: relative;
+    --snake-nostrils: '       •';
+    --snake-eye-height: 25px;
+    --snake-eye-width: 25px;
+    --snake-eye-color: #fff;
+    --snake-eye-border: 6px solid var(--snake-color);
+    --snake-eye-pupil: inset -6px -1px 2px 0 black;
 }
 
 .board .row .cell.snake-head::before {
-    content: '       •';
+    content: var(--snake-nostrils);
     white-space: pre;
     position: absolute;
     top: 30px;
     left: 0;
-    width: 25px;
-    height: 25px;
+    width: var(--snake-eye-width);
+    height: var(--snake-eye-height);
     background: white;
-    border: 6px solid lightblue;
+    border: var(--snake-eye-border);
     border-radius: 50%;
-    box-sizing: border-box;
-    box-shadow: inset -6px -1px 2px 0 black;
+    box-shadow: var(--snake-eye-pupil);
     line-height: 0;
 }
 
 .board .row .cell.snake-head::after {
-    content: '       •';
+    content: var(--snake-nostrils);
     white-space: pre;
     position: absolute;
     top: -5px;
     left: 0;
-    width: 25px;
-    height: 25px;
+    width: var(--snake-eye-width);
+    height: var(--snake-eye-height);
     background: white;
-    border: 6px solid lightblue;
+    border: var(--snake-eye-border);
     border-radius: 50%;
-    box-sizing: border-box;
-    box-shadow: inset -6px -1px 2px 0 black;
+    box-shadow: var(--snake-eye-pupil);
     line-height: 27px;
 }
