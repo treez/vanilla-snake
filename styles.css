@@ -34,27 +34,38 @@
 }
 
 .board .row .cell.snake-head {
-    --snake-color: blue;
     border-radius: 0 40% 40% 0;
     position: relative;
 }
 
 .board .row .cell.snake-head::before {
-    content: '';
+    content: '       •';
+    white-space: pre;
     position: absolute;
     top: 30px;
-    left: 30px;
-    width: 10px;
-    height: 10px;
-    background: lightblue;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 6px solid lightblue;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: inset -6px -1px 2px 0 black;
+    line-height: 0;
 }
 
 .board .row .cell.snake-head::after {
-    content: '';
+    content: '       •';
+    white-space: pre;
     position: absolute;
-    top: 10px;
-    left: 30px;
-    width: 10px;
-    height: 10px;
-    background: lightblue;
+    top: -5px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border: 6px solid lightblue;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: inset -6px -1px 2px 0 black;
+    line-height: 27px;
 }
